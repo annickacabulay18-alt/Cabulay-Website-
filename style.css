@@ -24,7 +24,7 @@ nav a {
 /* Home */
 .hero {
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url("Coffee.jpeg");
+    url("Images/Coffee.jpeg");
 
     background-size: cover;
     background-position: center;
