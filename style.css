@@ -32,8 +32,9 @@ header h2 {
 nav {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 18px;
 }
 
 nav a {
@@ -333,13 +334,17 @@ footer p {
     }
 
     nav {
-        justify-content: center;
-        gap: 12px;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 10px;
+      width: 100%;
     }
 
     nav a {
-        font-size: 13px;
+      font-size: 12px;
+      white-space: nowrap;
     }
+
 
     .hero {
         padding: 80px 15px;
@@ -428,68 +433,31 @@ footer p {
 
 
 /* CART */
-
 #cart {
-    background-color: #eee4d6;
+    background-color: #d9c5aa;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+#cart h2 {
+    margin: 0 0 8px;
+    font-size: 23px;
+}
+
+#cart > p {
+    margin: 5px 0;
+    font-size: 14px;
 }
 
 #cart-items {
     max-width: 750px;
-    margin: 25px auto;
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    background-color: #fffaf0;
-    padding: 15px 20px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    text-align: left;
-}
-
-.cart-item-info {
-    flex: 1;
-}
-
-.cart-item h3 {
-    margin: 0 0 6px;
-    font-size: 17px;
-}
-
-.cart-item p {
-    margin: 0;
-    font-size: 14px;
-}
-
-.cart-controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.cart-controls button,
-#checkout-button {
-    background-color: #a47b5b;
-    color: white;
-    border: none;
-    padding: 9px 13px;
-    border-radius: 20px;
-    font-family: Georgia, serif;
-    cursor: pointer;
-}
-
-.cart-controls button:hover,
-#checkout-button:hover {
-    background-color: #79583f;
+    margin: 12px auto;
 }
 
 #cart h3 {
-    margin: 20px 0;
+    margin: 10px 0;
+    font-size: 16px;
 }
-
 #checkout-button {
     padding: 12px 25px;
     font-size: 15px;
@@ -541,4 +509,33 @@ footer p {
 
 .add-to-cart-button:hover {
     background-color: #79583f;
+}
+
+#cart .cart-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+#checkout-button {
+    margin: 0;
+}
+
+/* PLACE MY ORDER BUTTON */
+#checkout-button {
+    background-color: #a47b5b !important;
+    color: white !important;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#checkout-button:hover {
+    background-color: #79583f !important;
 }
