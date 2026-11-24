@@ -18,6 +18,7 @@
             <a href="#menu">Menu</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
+            <a href="#cart">My Order(<span id="cart-count">0</span>)</a>
         </nav>
     </header>
 
@@ -29,57 +30,101 @@
         <a href="#menu" class="button">Explore Our Menu</a>
     </section>
 
-    <section id="menu">
-        <h2>Our Little Treats</h2>
 
-        <p>Something sweet, something refreshing, something just for you.</p>
+    <section id="menu">
+
+        <h2 id="menu-title">Our Little Treats</h2>
+
+        <p id="menu-description">
+            Something sweet, something refreshing, something just for you.
+        </p>
 
         <div class="menu-container">
 
-            <div class="menu-card">
-                <img src="Images/Cakes.jpeg" alt="Cake">
-                <h3>Cake Slices</h3>
+            <div class="menu-card" onclick="showCategory('cakes')">
+                <img src="Images/Cakes.jpeg" alt="Cakes">
+                <h3>Cakes</h3>
                 <p>Delicious slices of cake for your sweetest cravings.</p>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" onclick="showCategory('drinks')">
                 <img src="Images/Drinks.jpeg" alt="Drinks">
-                <h3>Refreshing Drinks</h3>
+                <h3>Drinks</h3>
                 <p>A variety of drinks to brighten your day.</p>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" onclick="showCategory('pastries')">
                 <img src="Images/Pastries.jpeg" alt="Pastries">
-                <h3>Delicious Snacks</h3>
+                <h3>Pastries</h3>
                 <p>Little bites and tasty snacks to complete your visit.</p>
             </div>
 
         </div>
+
+
+        <!-- ADDED MENU -->
+        <div id="full-menu" style="display: none;">
+
+            <button class="back-button" onclick="showOverview()">
+                ← Back to Categories
+            </button>
+
+            <div id="product-list" class="product-container"></div>
+
+        </div>
+
     </section>
+
 
     <section class="about" id="about">
         <h2>A Place to Slow Down</h2>
 
-        <p>Little Moments Cafe is a cozy place where everyone can
-          enjoy delicious cake slices, refreshing drinks, and
-          delightful snacks. Whether you're spending time with
-          friends or enjoying a quiet moment alone, we welcome
-          you to relax and enjoy the little things in life.</p>
+        <p>
+            Little Moments Cafe is a cozy place where everyone can
+            enjoy delicious cake slices, refreshing drinks, and
+            delightful snacks. Whether you're spending time with
+            friends or enjoying a quiet moment alone, we welcome
+            you to relax and enjoy the little things in life.
+        </p>
     </section>
+
+    <!-- MY ORDER -->
+    <section id="cart">
+
+         <h2>My Order</h2>
+
+         <p>Your little treats are waiting!</p>
+
+    <div id="cart-items">
+        <p>You haven't added anything yet.</p>
+    </div>
+
+    <h3>Total: ₱<span id="cart-total">0.00</span></h3>
+
+    <button id="checkout-button" onclick="checkout()">
+        Place My Order
+    </button>
+
+</section>
+
 
     <section id="contact">
         <h2>Come Visit Us</h2>
 
         <p>We would love to welcome you!</p>
-        <p>Location: Dadto ras unahan</p>
-        <p>Contact: 01234567</p>
-        <p>Business Hours: Open 24/7 </p>
+        <p>Location: Robinsons Mall Valencia</p>
+        <p>Contact: 089 445 3245</p>
+        <p>Business Hours: 7am - 9pm </p>
     </section>
+
 
     <footer>
         <p>2026 Little Moments Cafe. All Rights Reserved.</p>
         <p>A little sweetness in every visit. ♡</p>
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
